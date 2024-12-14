@@ -111,15 +111,15 @@ public class MemoryAllocatorUI {
 
         // Control panel
         JPanel controlPanel = new JPanel();
-        controlPanel.setLayout(new GridLayout(3, 2));
+        controlPanel.setLayout(new GridLayout(2, 2));
 
-        JTextField blockSizeField = new JTextField();
-        JButton addBlockButton = new JButton("Add Block");
-        addBlockButton.addActionListener(e -> {
-            int size = Integer.parseInt(blockSizeField.getText());
-            allocator.addMemoryBlock(size);
-            updateMemoryList();
-        });
+        // JTextField blockSizeField = new JTextField();
+        // JButton addBlockButton = new JButton("Add Block");
+        // addBlockButton.addActionListener(e -> {
+        // int size = Integer.parseInt(blockSizeField.getText());
+        // allocator.addMemoryBlock(size);
+        // updateMemoryList();
+        // });
 
         JTextField processSizeField = new JTextField();
         JButton allocateButton = new JButton("Allocate");
@@ -137,9 +137,9 @@ public class MemoryAllocatorUI {
             updateMemoryList();
         });
 
-        controlPanel.add(new JLabel("Block Size:"));
-        controlPanel.add(blockSizeField);
-        controlPanel.add(addBlockButton);
+        // controlPanel.add(new JLabel("Block Size:"));
+        // controlPanel.add(blockSizeField);
+        // controlPanel.add(addBlockButton);
         controlPanel.add(new JLabel("Process Size:"));
         controlPanel.add(processSizeField);
         controlPanel.add(allocateButton);
